@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取窗口的大小和位置</title>
+		<style type="text/css">
+			/*body{
+				height: 1920px;
+				width: 1920px;
+			}*/
+		</style>
+	</head>
+	<body>
+		<pre>
+			Document 对象的属性和方法
+		</pre>
+		<div>
+			
+		</div>
+		<script type="text/javascript">
+			console.log(document.title)
+			
+			//window对象--文档的大小
+			console.log(window.innerHeight) //可视窗口的高度
+			console.log(window.outerHeight) //整个浏览器的高度
+			console.log(screen.height)  //屏幕的高度
+			
+			
+			
+			console.log(window.innerWidth)  //可视窗口的宽度 1920不受滚动条的影响
+			console.log(window.outerWidth)  //1936 = innerwidth+边框宽度  不受滚动的影响
+			console.log(screen.width)  //屏幕的宽度\
+			
+			//获取可见的窗口的大小
+			
+			console.log(document.documentElement.clientHeight)
+			console.log(document.documentElement.clientWidth)
+			
+			//
+			console.log(document.documentElement.offsetHeight)
+			console.log(document.documentElement.offsetWidth)
+		</script>
+	</body>
+</html>

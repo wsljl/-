@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>类名的添加、切换、移除</title>
+		<style type="text/css">
+			main{
+				height: 100px;width: 300px;
+			}
+			.red{
+				color: red;
+				font-size: 14px;
+			}
+			.bule{
+				color: blue;
+				font-size: 30px;
+				background: red;
+			}
+			.white{
+				color: white;
+				font-size: 15px;
+				background: black;
+			}
+		</style>
+	</head>
+	<body>
+		<main class = 'bre'>
+			想要修改当前的标签的文字的颜色们第一次是红色，字体是14px，第二次是蓝色，背景色是红色，字体是30px 第三次是白色，黑色背景，字体15px
+		</main>
+		<main class = 'red'>
+			想要修改当前的标签的文字的颜色们第一次是红色，字体是14px，第二次是蓝色，背景色是红色，字体是30px 第三次是白色，黑色背景，字体15px
+		</main>
+		<main class = 'bule'>
+			想要修改当前的标签的文字的颜色们第一次是红色，字体是14px，第二次是蓝色，背景色是红色，字体是30px 第三次是白色，黑色背景，字体15px
+		</main>
+		<main class = 'white'>
+			想要修改当前的标签的文字的颜色们第一次是红色，字体是14px，第二次是蓝色，背景色是红色，字体是30px 第三次是白色，黑色背景，字体15px
+		</main>
+		<script type="text/javascript">
+//			var main = document.querySelector('main')
+//			// classname属性，改变当前标签的类名
+//			main.className = 'red'
+//			main.className = 'bule red'
+            var main = document.querySelector('main')
+            var mainLi = document.querySelectorAll('main')
+            for ( var i = 0; i<mainLi.length;i++){
+//          	console.log(main[li].className)
+//          	console.log(main[li].classList)
+            	var m = mainLi[i].classList
+//          	if ( m.contains('bule') ){
+//          		m.remove('bule') 
+//          	}else{
+//          		m.add('bule')
+//          	}
+//contains()包含某个类名，add（），添加某个类名，remove（）移除
+//toggle()切换，如果类名存在，则删除当前类名，如果不存在则添加
+                m.toggle('bule')
+                console.log( m )
+            }
+		</script> 
+	</body>
+</html>

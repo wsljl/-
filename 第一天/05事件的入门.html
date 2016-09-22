@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件的入门</title>
+	</head>
+	<body>
+		<button type="button" onclick="click1()"> 点击 </button>
+		<button type="button"> 点击 </button>
+		<script>
+			//线获取事件发生的元素
+			var button = document.querySelector('button')
+			//触发事件的执行方法
+			function click1(){
+				console.log('这是第一种调用方法')
+			}
+			//第一种执行方法：把事件作为属性添加到开始标签内部
+			//写法：<button onname = '执行函数'>
+//			onclick
+//          第二种调用方法：element.on + 时间名称 = function （）｛｝匿名函数
+            button.onclick = function(){
+            	console.log('这是第二种调用方法')
+            }
+              
+            //第三种方法 addeventListenner()给元素添加监听事件
+            function click2(){
+            	console.log('这是第三种调用方法')
+            }
+            button.addEventListener('click',click2)
+            // addEventListnener()
+		</script>
+	</body>
+</html>

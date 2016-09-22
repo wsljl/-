@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>data-*属性的介绍</title>
+		*{
+			
+		}
+	</head>
+	<body>
+		<pre>
+			data-* 自定义数据
+			自定义的数据可以让页面拥有更好的交互体验
+			注意事项：
+			
+                     属性名不要包含大写字母，在 data- 后必须至少有一个字符。
+                     该属性可以是任何字符串
+            bootstrap比较常见
+                     使用dataset可以获取所有的自定义的数据，输出的内容类型是对象
+            
+		</pre>	
+		<button type="button" data-name='dianji' data-toggle = "collapse" 
+			data-target = "#nav" title="点击">点击</button>
+		<script type="text/javascript">
+			//获取当前标签的属性所有data-*的值 并将值放在一个数组里
+		    var button = document.querySelector('button')
+//		    console.log(button.attributes)
+		    // 获取标签所有的属性
+		    var attrs = button.attributes
+		    //遍历获取所有属性的名称
+		    var arry = [ ]
+		    var obj = {}
+		    var j = 0
+		    for ( var i = 0; i < attrs.length;i++){
+//		    	console.log( attrs[i].name)
+		    	if ( attrs[i].name.substring(0,5) == 'data-'){
+//		    		console.log( attrs[i].name)
+//                  console.log(attrs[i].value)
+//                  arry[j] = attrs[i].value
+//                  j++
+                    obj[attrs[i].name] = attrs[i].value                    
+		    	}
+		    }
+		    console.log(obj)
+//		    console.log( arry)
+		    console.log(button.dataset)
+		    button.dataset.age = '7'
+		</script>
+	</body>
+</html>

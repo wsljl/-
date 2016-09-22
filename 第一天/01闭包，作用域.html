@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>闭包，作用域</title>
+	</head>
+	<body>
+		<pre>
+			把全局变量转换为局部变量，把所有的代码放进一个匿名 函数里，然后函数的自我调用
+		</pre>
+		<!--
+			全局变量的声明周期，到页面关闭
+			局部变量的生命周期，执行函数的时候，开始创建，执行完毕之后，生命结束
+		-->
+		<script type="text/javascript">
+//			var i = 0 ;  // 全部变量
+//			function add(){
+//				console.log( i )
+//				var j = 1  // 局部变量 器作用域是当前的函数范围之内
+//				function add2(){
+//					for (;j<10;j++)
+//					console.log( j )
+//				}
+//				add2()
+//			}
+//			add()
+			(function(){
+				console.log('匿名函数') 
+			})()
+		</script>
+	</body>
+</html>
